@@ -1,0 +1,41 @@
+/* ----------------------------PROMOTION SECTION------------------- */
+#promotion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 90%;
+}
+
+.promotion-section {
+  color: $color-white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px 25px;
+  width: 25%;
+  box-shadow: 0 2px 4px rgba($color-black, 0.4);
+
+  &.coupon-saving {
+    background-color: $color-box-coupon;
+  }
+
+  &.free-delivery {
+    background-color: $color-box-delivery;
+  }
+
+  &.gift-voucher {
+    background-color: $color-box-gift;
+  }
+
+  .promo-individual p {
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+
+  .promo-icons {
+    width: 20%;
+  }
+}

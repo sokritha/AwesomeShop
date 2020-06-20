@@ -1,0 +1,22 @@
+/* ----------------------------CATEGORY SECTION------------------- */
+#category-section {
+  width: 20%;
+}
+
+.list-category li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 20px 0;
+
+  img {
+    width: 20%;
+    margin-left: 5%;
+  }
+
+  a {
+    color: $color-black;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+}

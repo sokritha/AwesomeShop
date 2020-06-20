@@ -1,0 +1,35 @@
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 6px 20px;
+  outline: none;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &.btn-cart {
+    color: $color-gray-light;
+    background-color: $color-primary-dark;
+    transition: all 0.2s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &:hover {
+      box-shadow: 0 1px 2px rgba($color: $color-black, $alpha: 0.8);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color: $color-black, $alpha: 0.15);
+      transform: translateY(0);
+    }
+
+    .cart-icon {
+      margin-right: 4px;
+    }
+  }
+}

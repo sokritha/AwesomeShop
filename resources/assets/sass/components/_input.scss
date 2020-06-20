@@ -1,0 +1,12 @@
+input {
+  border: 1px solid $color-white;
+  border-radius: 100px;
+  padding: 10px 14px;
+  outline: none;
+
+  &#search-bar-input {
+    margin-top: 80px;
+    width: 45%;
+    animation: moveUp 1s ease-out;
+  }
+}
