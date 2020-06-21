@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <?php $feature = $product->getData('features'); ?>
     <header>
         <nav>
             <h1>Awesome<span id="brand-name">Shop</span></h1>
@@ -25,11 +26,12 @@
         </nav>
         <div class="intro-feature">
             <div class="intro-detail">
-                <h1>Shop your designer dresses</h1>
+                <?php foreach ($feature as $foundFeature) { ?>
+                <h1><?php echo $foundFeature['title'] ?></h1>
                 <p>
-                    Ready to wear dresses tailored for you from online. Hurry up while
-                    stock lasts.
+                    <?php echo $foundFeature['description'] ?>
                 </p>
+                <?php } ?>
             </div>
             <input type="text" id="search-bar-input" placeholder="🔍 Search your products from here" />
         </div>

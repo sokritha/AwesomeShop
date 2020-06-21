@@ -4,9 +4,29 @@ const list_category_elements = document
 const list_discount_elements = document.querySelectorAll(".discount");
 const after_discount_price_element = document.querySelectorAll(".after-price");
 const init_discount_price_element = document.querySelectorAll(".initial-price");
+const product_elements = document.getElementById("products-section").children;
 
 const list_category = Array.from(list_category_elements);
 const list_discount = Array.from(list_discount_elements);
+const list_product = Array.from(product_elements);
+
+function hideProduct() {
+  list_product.forEach((foundProduct) => {
+    console.log(foundProduct);
+    foundProduct.classList.add("u-hide-box");
+  });
+}
+
+function isSameCategory(nameCategory) {
+  hideProduct();
+  list_product.forEach((foundProductCategory, index) => {
+    let nameClass = foundProductCategory.className;
+    let listClass = nameClass.split(/(\s+)/);
+    if (listClass[2] === nameCategory) {
+      list_product[index].classList.remove("u-hide-box");
+    }
+  });
+}
 
 function isDiscountExist(list_discount) {
   list_discount.forEach((eachDiscount, index) => {
@@ -28,10 +48,11 @@ function isDiscountExist(list_discount) {
 
 isDiscountExist(list_discount);
 
-// ADDING A CLASS TO EACH LIST WHEN USER CLICK ON IT
-list_category.forEach((eachList) => {
+list_category.forEach((eachList, index) => {
   eachList.addEventListener("click", () => {
+    // ADDING A CLASS TO EACH LIST WHEN USER CLICK ON IT
     eachList.classList.add("u-shadow-box");
     $(".list-category").children().not(eachList).removeClass("u-shadow-box");
+    isSameCategory(eachList.innerText);
   });
 });

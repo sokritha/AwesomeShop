@@ -4,7 +4,7 @@ class DBcontroller
     protected $host = 'localhost';
     protected $user = 'root';
     protected $password = '';
-    protected $database = "awesomeShop";
+    protected $database = "awesome_shop";
 
     public $con = null;
 

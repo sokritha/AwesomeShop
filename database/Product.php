@@ -12,7 +12,7 @@ class Product
     }
 
     // FETCH PRODUCT DATA USING GETDATA METHOD
-    public function getData($table = 'product', $category = 'cloth')
+    public function getData($table)
     {
         $result = $this->db->con->query("SELECT * FROM ($table)");
 
