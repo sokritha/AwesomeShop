@@ -1,10 +1,10 @@
 <?php
 class DBcontroller
 {
-    protected $host = 'localhost';
-    protected $user = 'root';
-    protected $password = '';
-    protected $database = "awesome_shop";
+    protected $host = 'sql12.freemysqlhosting.net';
+    protected $user = 'sql12349963';
+    protected $password = 'F33hr7ZXWg';
+    protected $database = "sql12349963";
 
     public $con = null;
 

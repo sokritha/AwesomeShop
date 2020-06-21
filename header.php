@@ -12,10 +12,21 @@
     <?php
     include('./functions.php');
     ?>
+    <?php $feature = $product->getData('features'); ?>
+    <?php foreach ($feature as $foundFeature) { ?>
+    <style>
+    header {
+        background: url(<?php echo $foundFeature['image'] ?>);
+        background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+    }
+    </style>
 </head>
 
 <body>
-    <?php $feature = $product->getData('features'); ?>
     <header>
         <nav>
             <h1>Awesome<span id="brand-name">Shop</span></h1>
@@ -26,13 +37,14 @@
         </nav>
         <div class="intro-feature">
             <div class="intro-detail">
-                <?php foreach ($feature as $foundFeature) { ?>
+
                 <h1><?php echo $foundFeature['title'] ?></h1>
                 <p>
                     <?php echo $foundFeature['description'] ?>
                 </p>
-                <?php } ?>
+
             </div>
             <input type="text" id="search-bar-input" placeholder="🔍 Search your products from here" />
         </div>
     </header>
+    <?php } ?>
